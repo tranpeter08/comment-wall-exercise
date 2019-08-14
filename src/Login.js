@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Login = () => {
+const Login = ({setLoggedIn}) => {
 
   const handleLogin = e => {
     e.preventDefault()
-    // handle login
+    setLoggedIn(e.target.value);
   }
  
   return <form onSubmit={handleLogin}>

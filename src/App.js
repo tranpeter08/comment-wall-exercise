@@ -5,8 +5,7 @@ import Login from './Login';
 import './App.css';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState('p');
-
+  const [loggedIn, setLoggedIn] = useState('');
   const [user, setUser] = useState('');
 
   return loggedIn ? 
@@ -15,7 +14,7 @@ function App() {
       <CommentForm user={user} />
     </>
     :
-    <Login />
+    <Login setLoggedIn={setLoggedIn} />
 }
 
 export default App;
